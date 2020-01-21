@@ -1,0 +1,63 @@
+<div class="modal-header">
+  <!-- <h4 class="modal-title">Hi there!</h4> -->
+  <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">{{ item.name }}</h4>
+        <p class="card-text">{{ item.description }}</p>
+        <h4 class="card-text text-right" > ${{item.price}}</h4>
+
+        <!-- <div class="form-group">
+          <label><h6>{{item.options.title}}</h6></label>
+          <div class="radio" *ngFor="let option of item.options.choices">
+            <div class="row">
+              <div class="col-5">
+                <label class="checkbox-inline">
+                  <input
+                    type="checkbox" name="option-{{option.name}}" (change)="onSelectOption(option.name, option.price, $event)">
+                  {{option.name}}
+                </label>
+              </div>
+              <div class="col-7">
+                +${{option.price}}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label><h6>Special Instructions</h6></label>
+          <br>
+          <textarea name="specialinstruction" row="3" [(ngModel)]="instruction">
+          </textarea>
+        </div>
+        -->
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-6 text-left">
+        <button type="button" class="btn btn-primary btn-circle" (click)="subtractOne()">
+          -
+        </button>
+        {{dishMultiplier}}
+        <button type="button" class="btn btn-primary btn-circle" (click)="addOne()">
+          +
+        </button>
+      </div>
+      <div class="col-6 text-right">
+        <button class="btn btn-primary" type="submit" (click)="addToCart()">Add to Cart ${{totalDishPrice}}</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- <div class="modal-footer">
+
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>
+-->

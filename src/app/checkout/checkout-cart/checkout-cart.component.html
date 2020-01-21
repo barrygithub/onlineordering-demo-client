@@ -1,0 +1,52 @@
+<div class="card">
+  <div class="card-header">
+    <p>Your order from</p>
+    <p>Burger Land</p>
+    <a routerLink="/">
+      <button  class="btn center-block btn-lg btn-success" (click)="placeOrder()">Place Order</button>
+    </a>
+  </div>
+  <app-menu-cart-list></app-menu-cart-list>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-10">
+          <textarea name="notes" placeholder="Add note (extra sauce, no onion etc."></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-10">
+          <div class="card-text">Subtotal</div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="card-text">${{subtotalPrice}}</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-10">
+          <div class="card-text">Tax</div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="card-text">${{tax}}</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-10">
+          <div class="card-text">Total</div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="card-text">${{finalTotalPrice}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

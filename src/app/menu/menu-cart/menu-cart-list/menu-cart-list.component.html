@@ -1,0 +1,7 @@
+<ng-container *ngIf="selectedItems.length !== 0;">
+  <app-menu-cart-item
+    *ngFor="let selectedItem of selectedItems"
+    [cartItem] = "selectedItem">
+  </app-menu-cart-item>
+</ng-container>
+

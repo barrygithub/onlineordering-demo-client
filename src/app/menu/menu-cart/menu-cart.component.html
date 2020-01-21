@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-header">
+    <a routerLink="/checkout">
+      <button  class="btn center-block btn-lg btn-success" [disabled]="subtotalPrice == 0">Checkout</button>
+    </a>
+  </div>
+
+  <app-menu-cart-list></app-menu-cart-list>
+
+  <ng-container *ngIf="subtotalPrice != 0; else infoText">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-9">
+            <div class="card-text">Subtotal ({{numOfItems}} item)</div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="card-text">${{subtotalPrice}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #infoText>
+    <div class="card-body">
+      <div class="card-text">Add items to your cart and they’ll appear here.</div>
+    </div>
+  </ng-template>
+
+</div>

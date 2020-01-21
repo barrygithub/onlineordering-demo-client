@@ -1,0 +1,29 @@
+<div class="card-body">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="form-group">
+        <select class="form-control" name="quantity"
+                [(ngModel)]="selectedQuantity"
+                (ngModelChange)="updateQuantity($event)">
+          <option *ngFor="let quantityNum of quantityNums" [ngValue]="quantityNum">
+            {{quantityNum}}
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-sm-5">
+      <h6 class="card-text">{{ cartItem.name }}</h6>
+      <p class="card-subtitle" style="color: gray" *ngFor="let option of cartItem.options" >{{option}}</p>
+      <a
+        href="#"
+        (click)="onRemove()">
+        <p>Remove</p>
+      </a>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="card-text">${{ cartItem.totalPrice }}</div>
+    </div>
+  </div>
+</div>
