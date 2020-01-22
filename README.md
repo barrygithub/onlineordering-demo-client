@@ -14,7 +14,7 @@ To begin using this site, choose one of the following options to get started:
 * Fork the repo.
 
 ## Start the project
-The project is started with the regular ionic commands.
+The project is started with the regular angular commands.
 
 1. Run `npm install` to install all dependencies.
 2. Run `ng serve --port 4201` to start the development environment.
