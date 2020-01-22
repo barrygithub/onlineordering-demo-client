@@ -1,10 +1,12 @@
-# Online Food Ordering Demo Client
-* Prototyping data flow between client, admin panel
+# Online Food Ordering Demo - Client Side
+* Prototyping online food ordering data flow between client, admin panel and nodejs backend
 
 ## Features
 * Display food data from node.js backend and mongodb
-* Calculate number of orders and price in cart 
+* Calculate number of orders and costs in cart 
 * Send food orders to admin panel 
+
+![Imgur](https://i.imgur.com/MmnfshZ.png)
 
 ## Getting Started
 To begin using this site, choose one of the following options to get started:
